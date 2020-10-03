@@ -317,3 +317,66 @@ h3 {
     background-image: url('../../assets/icons/icon-sleeping-area.svg');
 }
 
+/*DONATION*/
+
+.donation {
+    background-color: #F6F6F6;
+    padding: 84px 0 100px 0;
+}
+
+.donation__content {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    align-items: center;
+
+}
+
+.donation__info {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: flex-start;
+}
+
+.donation h3 {
+    width: 300px;
+}
+
+.donation__card-info {
+    font-family: Georgia;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.donation__number {
+    padding: 10px 15px 10px 60px;
+    font-family: Georgia;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #545454;
+    background-color: #F1CDB3;
+    border-radius: 9px;
+    background-image: url('../../assets/icons/credit-card.svg');
+    background-repeat: no-repeat;
+    background-position: 15px 10px;
+}
+
+.donation__remark {
+    font-family: Arial;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #B2B2B2;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
