@@ -211,13 +211,13 @@ h3 {
 }
 
 .button_prev {
-    background-image: url('/assets/icons/Arrow_prev.svg');
+    background-image: url('../../assets/icons/Arrow_prev.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .button_next {
-    background-image: url('/assets/icons/Arrow_next.svg');
+    background-image: url('../../assets/icons/Arrow_next.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -244,5 +244,76 @@ h3 {
     line-height: 23px;
     letter-spacing: 0.06em;
     color: #545454;
+}
+
+/*HELP*/
+
+.help {
+    background-color: #fff;
+    padding: 80px 0 100px 0;
+    text-align: center;
+}
+
+.help h3 {
+    width: 310px;
+    display: inline-block;
+}
+
+.help__categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 120px;
+    row-gap: 55px;
+    margin: 60px 85px 0 85px;
+}
+
+.categories__item {
+    padding-top: 90px;
+    min-width: 60px;
+    font-family: Georgia;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #545454;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.categories__food{
+    background-image: url('../../assets/icons/icon-pet-food.svg');
+}
+
+.categories__transportation{
+    background-image: url('../../assets/icons/transportation.svg');
+}
+
+.categories__toys{
+    background-image: url('../../assets/icons/icon-toys.svg');
+}
+
+.categories__bowls{
+    background-image: url('../../assets/icons/icon-bowls-and-cups.svg');
+}
+
+.categories__shampoos{
+    background-image: url('../../assets/icons/icon-shampoos.svg');
+}
+
+.categories__vitamins{
+    background-image: url('../../assets/icons/icon-vitamins.svg');
+}
+
+.categories__medicines{
+    background-image: url('../../assets/icons/icon-medicines.svg');
+}
+
+.categories__collars{
+    background-image: url('../../assets/icons/icon-collars-leashes.svg');
+}
+
+.categories__sleeping{
+    background-image: url('../../assets/icons/icon-sleeping-area.svg');
 }
 
