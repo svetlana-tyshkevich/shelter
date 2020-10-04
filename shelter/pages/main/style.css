@@ -135,6 +135,7 @@ padding-bottom: 5px;
 .button_bordered {
     background: none;
     border: 2px solid #F1CDB3;
+    padding: 15px 43px;
 }
 
 
@@ -321,7 +322,7 @@ h3 {
 
 .donation {
     background-color: #F6F6F6;
-    padding: 84px 0 100px 0;
+    padding: 84px 0 102px 0;
 }
 
 .donation__content {
@@ -371,12 +372,63 @@ h3 {
     font-style: italic;
     font-weight: normal;
     font-size: 12px;
-    line-height: 150%;
+    line-height: 152%;
     color: #B2B2B2;
     padding: 0;
     margin: 0;
 }
 
+/*FOOTER*/
+
+.footer {
+    padding-top: 40px;
+    background: url('../../assets/images/noise_transparent@2x.png'), 
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, 
+    #1A1A1C 100%), #211F20;
+}
+
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer__column {
+   margin-top: 16px;
+   margin-bottom: 60px;
+   display: flex;
+   flex-direction: column;
+    justify-content: space-between;
+    height: 234px;
+}
+
+.contacts {
+    width: 279px;
+}
+
+.address {
+    width: 300px;
+}
+
+.footer__column h3 {
+    font-family: Georgia;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+
+.footer__link {
+    font-family: Georgia;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+    display: flex;
+    justify-content: start;
+    column-gap: 20px;
+    align-items: center;
+}
 
 
 
