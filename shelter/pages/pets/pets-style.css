@@ -1,0 +1,67 @@
+.header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    padding: 30px 0;
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+}
+
+.logo__title {
+    color: #545454;
+}
+
+.logo__subtitle {
+    color: #292929;
+}
+
+.navigation__item a {
+    color: #545454;
+}
+
+.navigation__item_active a {
+    color: #292929;
+}
+
+.navigation__item a:hover/*,
+ .navigation__item a:focus*/ { 
+    color: #292929;
+}
+
+.pets__cards {
+    margin: 60px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+.pagination {
+    margin-top: 61px;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.pagination__button {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 20px;
+}
+
+.current-page {
+    background-color: #F1CDB3;;
+}
+
+.pagination__button[disabled] {
+    color: #CDCDCD;
+    border-color: #CDCDCD;
+}
+
+.pagination__button[disabled]:hover {
+    background-color: transparent;
+    cursor: default;
+}
