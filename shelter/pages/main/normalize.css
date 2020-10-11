@@ -10,7 +10,8 @@
 
 html {
   line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; 2
+  
 }
 
 /* Sections
@@ -363,9 +364,10 @@ button {
   border: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
+  
 }
 
 button:focus, a:focus,
@@ -374,3 +376,6 @@ button:hover, a:hover {
   cursor: pointer;
 }
 
+img {
+  flex-shrink: 0;
+}
