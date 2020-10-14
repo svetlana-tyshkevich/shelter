@@ -1,0 +1,70 @@
+.button {
+    padding: 16px 45px;
+    background: $color-primary;
+    border-radius: 100px;
+    font-family: $font-primary;
+    font-size: 17px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: $color-dark-3xl;
+
+    &:hover{
+        background-color: $color-primary-hover;
+        border-color:  $color-primary-hover;
+    }
+
+    &:active {
+        background-color:$color-primary;
+        border: 2px solid $color-primary;
+    }
+}
+
+.button_bordered {
+    background: none;
+    border: 2px solid $color-primary;
+    padding: 15px 43px;
+}
+
+.button_next, .button_prev {
+    width: 56px;
+    height: 52px;
+    padding: 15px; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button_prev {
+    background-image: url('../../assets/icons/Arrow_prev.svg');
+}
+
+.button_next {
+    background-image: url('../../assets/icons/Arrow_next.svg');
+}
+
+.pagination {
+    margin-top: 61px;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.pagination__button {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 20px;
+}
+
+.current-page {
+    background-color: $color-primary;;
+}
+
+.pagination__button[disabled] {
+    color: $color-dark-s;
+    border-color: $color-dark-s;
+    &:hover {
+        background-color: transparent;
+        cursor: default;
+    }
+}

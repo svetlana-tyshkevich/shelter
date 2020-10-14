@@ -1,0 +1,219 @@
+/*PROMO*/
+.promo {
+    background: $gradient-background;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 180px;
+    }
+}
+
+.promo__content {
+    margin-top: 164px;
+}
+
+.promo h2 {
+    width: 310px;
+    font-family:$font-primary;
+    font-size: 44px;
+    line-height: 57px;
+    color: $color-light-xl;
+}
+
+.promo__info {
+    font-family: $font-secondary;
+    width: 460px;
+    margin: 41px 0 41px;
+    font-size: 15px;
+    line-height: 160%;
+    color: $color-dark-s;
+}
+
+/*ABOUT*/
+.about, .help {
+    background-color: $color-light-xl;
+}
+
+.about__content {
+    padding: 80px 175px 100px;
+    @include content-box(space-between);
+}
+
+h3 {
+    @include h3;
+}
+
+.about__text {
+    width: 430px;
+    
+    h3 {width: 370px;}
+    p {
+       margin-top: 25px; 
+       font-family: $font-secondary;
+       color: $color-dark-xl;
+       font-size: 15px;
+       line-height: 160%;
+    }
+}
+
+/*GALLERY*/
+
+.pets, .donation {
+    background-color: $color-light-l;
+}
+
+.pets__content {
+    padding: 80px 0 100px;
+    text-align: center;
+
+    h3 {
+        width: 400px;
+        margin: 0 auto;
+    }
+}
+
+.pets__gallery {
+    @include content-box(space-between);
+    width: 100%;
+    padding: 61px 0;
+}
+
+.pets__cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 52px;
+}
+
+.card {@include card}
+
+
+/*HELP*/
+
+.help {
+    padding: 80px 0 77px 0;
+    h3 {
+    width: 310px;
+    margin: 0 auto;
+    text-align: center;
+}
+}
+
+.help__categories{
+    @include content-box(center);
+    flex-wrap: wrap;
+    column-gap: 120px;
+    margin: 30px 85px 0 85px;
+}
+
+.categories__item {
+    padding-top: 90px;
+    margin: 30px 0 25px;
+    min-width: 60px;
+    font-family: $font-primary;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.categories__food{
+    background-image: url('../../assets/icons/icon-pet-food.svg');
+}
+
+.categories__transportation{
+    background-image: url('../../assets/icons/transportation.svg');
+}
+
+.categories__toys{
+    background-image: url('../../assets/icons/icon-toys.svg');
+}
+
+.categories__bowls{
+    background-image: url('../../assets/icons/icon-bowls-and-cups.svg');
+}
+
+.categories__shampoos{
+    background-image: url('../../assets/icons/icon-shampoos.svg');
+}
+
+.categories__vitamins{
+    background-image: url('../../assets/icons/icon-vitamins.svg');
+}
+
+.categories__medicines{
+    background-image: url('../../assets/icons/icon-medicines.svg');
+}
+
+.categories__collars{
+    background-image: url('../../assets/icons/icon-collars-leashes.svg');
+}
+
+.categories__sleeping{
+    background-image: url('../../assets/icons/icon-sleeping-area.svg');
+}
+
+/*DONATION*/
+
+.donation {
+    padding: 83px 0 102px 0;
+}
+
+.donation__content {
+    @include content-box(center);
+    column-gap: 30px;
+}
+
+.donation__info {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: flex-start;
+
+    h3 {width: 300px;}
+}
+
+.donation__card-info {
+    font-family: $font-primary;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+}
+
+.donation__number {
+    padding: 10px 15px 10px 60px;
+    font-family: $font-primary;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    background-color: $color-primary;
+    border-radius: 9px;
+    background-image: url('../../assets/icons/credit-card.svg');
+    background-repeat: no-repeat;
+    background-position: 15px 10px;
+
+    &:hover, &:focus { background-color: $color-primary-hover}
+}
+
+
+.donation__remark {
+    font-family: $font-secondary;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-dark-m;
+}
+
+@-moz-document url-prefix() {
+    h3 {
+        line-height: 44px;;
+    }
+}
+

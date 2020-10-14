@@ -1,0 +1,46 @@
+@import 'reset';
+@import 'abstracts/fonts';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'components/buttons';
+@import 'components/header';
+@import 'components/header-secondary';
+
+@import 'components/footer';
+
+.pets {
+    background-color: $color-light-l;
+}
+h3 {@include h3;}
+.pets__content {
+    padding: 80px 0 100px;
+    text-align: center;
+
+    h3 {
+        width: 400px;
+        margin: 0 auto;
+    }
+}
+
+.pets__gallery {
+    @include content-box(space-between);
+    width: 100%;
+    padding: 61px 0;
+}
+
+.pets__cards {
+    margin: 60px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+.card {@include card}
+
+@-moz-document url-prefix() {
+    h3 {
+        line-height: 44px;;
+    }
+}
