@@ -9,6 +9,13 @@
     align-items: flex-start;
 }
 
+.columns-container {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 160px;
+    align-items: flex-start;
+}
+
 .footer__column {
    margin-top: 18px;
    margin-bottom: 60px;

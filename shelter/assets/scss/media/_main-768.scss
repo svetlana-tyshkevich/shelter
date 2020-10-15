@@ -1,0 +1,85 @@
+@media (max-width: 1279px) {
+    .wrapper {
+        width: 768px;
+        padding: 0 30px;
+    }
+
+    .header {top: 30px;}
+
+    .promo .wrapper {
+        padding-top: 150px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        
+        img {
+            width: 569px;
+            align-self: flex-end;
+        }
+    }
+
+    .promo__content {
+        margin-top: 0px;
+        margin-bottom: 100px;
+
+        .button {margin: 0 auto; }
+    }
+
+    .about__content {
+        flex-direction: column;
+        
+        .about__text {
+            order: -1;
+            padding-bottom: 80px;
+        }
+    }
+
+    .pets__cards {margin: 0 12px;}
+
+
+    .card:nth-child(3) {
+        display: none;
+    }
+
+    .help__categories {
+        column-gap: 60px;
+        justify-content: space-between;
+        margin: 30px 39px 0 39px;
+    }
+
+    .categories__item {
+        width: 170px;
+    }
+
+    .donation__content {
+        flex-direction: column;
+        
+        .donation__info {
+            order: -1;
+            padding-bottom: 60px;
+        }
+    }
+    
+    .footer {
+        padding-top: 30px;
+    }
+
+    .footer__content {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 0 34px;
+
+        img {justify-self: center;}
+    }
+
+    .columns-container {
+        width: 100%;
+        justify-content: space-between;
+        column-gap: normal;
+    }
+
+    .footer__column {
+        margin-top: 0;
+        margin-bottom: 65px;
+    }
+}

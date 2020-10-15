@@ -445,6 +445,40 @@ button {
   background-image: url("../../assets/icons/Arrow_next.svg");
 }
 
+.pagination {
+  margin-top: 61px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.pagination__button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 20px;
+}
+
+.current-page {
+  background-color: #F1CDB3;
+}
+
+.pagination__button[disabled] {
+  color: #CDCDCD;
+  border-color: #CDCDCD;
+}
+
+.pagination__button[disabled]:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
 body {
   font-family: Georgia, serif;
   font-style: normal;
@@ -539,6 +573,16 @@ body {
 
 .promo__content {
   margin-top: 164px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .promo h2 {
@@ -552,7 +596,7 @@ body {
 .promo__info {
   font-family: Arial, Helvetica, sans-serif;
   width: 460px;
-  margin: 41px 0 41px;
+  margin: 42px 0 42px;
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
@@ -820,8 +864,8 @@ h3 {
 }
 
 @-moz-document url-prefix() {
-  .donation {
-    padding: 79px 0 100px 0;
+  h3 {
+    line-height: 44px;
   }
 }
 
@@ -837,6 +881,20 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.columns-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-column-gap: 160px;
+          column-gap: 160px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -888,5 +946,106 @@ h3 {
   line-height: 23px;
   letter-spacing: 0.06em;
   color: #F1CDB3;
+}
+
+@media (max-width: 1279px) {
+  .wrapper {
+    width: 768px;
+    padding: 0 30px;
+  }
+  .header {
+    top: 30px;
+  }
+  .promo .wrapper {
+    padding-top: 150px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .promo .wrapper img {
+    width: 569px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .promo__content {
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+  .promo__content .button {
+    margin: 0 auto;
+  }
+  .about__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__content .about__text {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    padding-bottom: 80px;
+  }
+  .pets__cards {
+    margin: 0 12px;
+  }
+  .card:nth-child(3) {
+    display: none;
+  }
+  .help__categories {
+    -webkit-column-gap: 60px;
+            column-gap: 60px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 30px 39px 0 39px;
+  }
+  .categories__item {
+    width: 170px;
+  }
+  .donation__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .donation__content .donation__info {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    padding-bottom: 60px;
+  }
+  .footer {
+    padding-top: 30px;
+  }
+  .footer__content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 34px;
+  }
+  .footer__content img {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .columns-container {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: normal;
+            column-gap: normal;
+  }
+  .footer__column {
+    margin-top: 0;
+    margin-bottom: 65px;
+  }
 }
 /*# sourceMappingURL=main-styles.css.map */

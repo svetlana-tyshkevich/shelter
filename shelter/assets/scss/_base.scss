@@ -11,6 +11,9 @@
 
 .promo__content {
     margin-top: 164px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .promo h2 {
@@ -24,7 +27,7 @@
 .promo__info {
     font-family: $font-secondary;
     width: 460px;
-    margin: 41px 0 41px;
+    margin: 42px 0 42px;
     font-size: 15px;
     line-height: 160%;
     color: $color-dark-s;

@@ -4,7 +4,7 @@
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": "/pages/pets/"
+            "savePath": "/pages/main/"
         }
     ]
 }
