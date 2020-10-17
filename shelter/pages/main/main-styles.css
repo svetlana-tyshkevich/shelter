@@ -430,7 +430,7 @@ button {
 }
 
 .button_next, .button_prev {
-  width: 56px;
+  min-width: 52px;
   height: 52px;
   padding: 15px;
   background-repeat: no-repeat;
@@ -591,6 +591,7 @@ body {
   font-size: 44px;
   line-height: 57px;
   color: #FFFFFF;
+  white-space: pre-line;
 }
 
 .promo__info {
@@ -626,6 +627,7 @@ h3 {
   line-height: 45px;
   letter-spacing: 0.06em;
   color: #545454;
+  white-space: pre-line;
 }
 
 .about__text {
@@ -685,6 +687,7 @@ h3 {
 }
 
 .card {
+  width: 275px;
   padding-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -719,7 +722,6 @@ h3 {
 }
 
 .help h3 {
-  width: 310px;
   margin: 0 auto;
   text-align: center;
 }
@@ -825,12 +827,8 @@ h3 {
           align-items: flex-start;
 }
 
-.donation__info h3 {
-  width: 300px;
-}
-
 .donation__card-info {
-  font-family: Georgia, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   line-height: 17px;
   letter-spacing: 0.06em;
@@ -1015,7 +1013,7 @@ h3 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .donation__content .donation__info {
+  .donation__info {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
@@ -1046,6 +1044,165 @@ h3 {
   .footer__column {
     margin-top: 0;
     margin-bottom: 65px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    width: 320px;
+    padding: 0 10px;
+  }
+  .navigation {
+    display: none;
+  }
+  .burger {
+    margin-right: 43px;
+    width: 30px;
+    height: 22px;
+    background-image: url("../../assets/icons/Burger.svg");
+    cursor: pointer;
+  }
+  .promo__content {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 106px;
+  }
+  .promo .wrapper h2 {
+    font-size: 25px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    width: 100%;
+  }
+  .promo .wrapper img {
+    width: 260px;
+  }
+  .promo__info {
+    width: auto;
+  }
+  h3 {
+    font-size: 25px;
+    line-height: 130%;
+    width: auto;
+    text-align: center;
+  }
+  .about__content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 42px 0;
+    width: auto;
+  }
+  .about__content img {
+    width: 260px;
+  }
+  .about__content .about__text {
+    width: 270px;
+    padding-bottom: 40px;
+  }
+  .about__content .about__text p {
+    text-align: justify;
+  }
+  .about__content .about__text h3 {
+    width: 270px;
+  }
+  .pets__content {
+    padding: 42px 0;
+  }
+  .pets__content h3 {
+    width: 300px;
+  }
+  .pets__content .card:nth-child(2) {
+    display: none;
+  }
+  .pets__content .pets__gallery {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 42px 0 42px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 80px;
+            column-gap: 80px;
+    row-gap: 19px;
+  }
+  .pets__content .pets__cards {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .help {
+    padding: 42px 0;
+  }
+  .help__categories {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    margin: 13px 5px 0;
+  }
+  .categories__item {
+    background-size: 50px;
+    min-width: 50px;
+    font-size: 15px;
+    line-height: 110%;
+    padding-top: 70px;
+    width: 130px;
+    margin: 31px 0 0;
+  }
+  .donation {
+    padding: 42px 0;
+  }
+  .donation img {
+    width: 260px;
+  }
+  .donation__info {
+    width: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 10px 44px;
+  }
+  .donation__card-info {
+    letter-spacing: normal;
+    font-size: 15px;
+    line-height: 160%;
+  }
+  .donation__number {
+    font-size: 15px;
+    line-height: 110%;
+    padding: 14px 15px 14px 59px;
+  }
+  .donation__remark {
+    text-align: justify;
+  }
+  .columns-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__content {
+    padding: 0;
+  }
+  .footer__content > img {
+    width: 260px;
+  }
+  .footer__column {
+    height: auto;
+    width: auto;
+    margin-bottom: 40px;
+    row-gap: 40px;
+  }
+  .footer__column h3 {
+    white-space: normal;
+    padding: 0 5px;
+  }
+  .contacts {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=main-styles.css.map */

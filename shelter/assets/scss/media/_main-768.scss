@@ -52,13 +52,13 @@
     }
 
     .donation__content {
-        flex-direction: column;
-        
-        .donation__info {
+        flex-direction: column; 
+    }
+    
+    .donation__info {
             order: -1;
             padding-bottom: 60px;
         }
-    }
     
     .footer {
         padding-top: 30px;

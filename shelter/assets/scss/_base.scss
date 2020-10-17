@@ -22,6 +22,7 @@
     font-size: 44px;
     line-height: 57px;
     color: $color-light-xl;
+    white-space: pre-line;
 }
 
 .promo__info {
@@ -97,7 +98,7 @@ h3 {
 .help {
     padding: 80px 0 77px 0;
     h3 {
-    width: 310px;
+    // width: 310px;
     margin: 0 auto;
     text-align: center;
 }
@@ -178,11 +179,11 @@ h3 {
     row-gap: 20px;
     align-items: flex-start;
 
-    h3 {width: 300px;}
+    // h3 {width: 300px;}
 }
 
 .donation__card-info {
-    font-family: $font-primary;
+    font-family: $font-secondary;
     font-size: 15px;
     line-height: 17px;
     letter-spacing: 0.06em;
