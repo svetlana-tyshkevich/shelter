@@ -42,14 +42,14 @@
 }
 
 .pagination {
-    margin-top: 61px;
+    width: 340px;
+    margin: 61px auto 0;
     display: flex;
-    justify-content: center;
-    column-gap: 20px;
+    justify-content: space-between;
 }
 
 .pagination__button {
-    width: 52px;
+    min-width: 52px;
     height: 52px;
     border-radius: 50%;
     padding: 0;

@@ -1,0 +1,77 @@
+@media (max-width: 767px) {
+    .wrapper {
+        width: 320px;
+        padding: 0 10px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .burger {
+        margin-right: 43px;
+        width: 30px;
+        height: 22px;
+        background-image: url('../../assets/icons/Burger-dark.svg');
+        cursor: pointer;
+    }
+
+    h3 {
+        font-size: 25px;
+        line-height: 130%;
+        width: auto;
+        text-align: center;
+    }
+
+    .pets__content{
+        padding: 42px 0;
+        h3{width: 300px;}
+
+        .card:nth-child(n + 4) {
+            display: none;
+        }
+
+        .pets__gallery{
+            flex-wrap: wrap;
+            padding: 42px 0 42px;
+            justify-content: center;
+            column-gap: 80px;
+            row-gap: 19px;
+        }
+
+        .pets__cards {
+            order: -1;
+            margin: 42px 15px;
+        }
+
+        .pagination {
+            width: 300px;
+        }
+    }
+
+    .columns-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    .footer__content {
+        padding: 0;
+        &>img {width: 260px;}
+    }
+
+    .footer__column{
+        height: auto;
+        width: auto;
+        margin-bottom: 40px;
+        row-gap: 40px;
+        h3 {
+            white-space: normal;
+            padding: 0 5px;
+        }
+    }
+
+    .contacts {align-items: center;}
+
+
+}

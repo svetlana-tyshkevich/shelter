@@ -430,7 +430,7 @@ button {
 }
 
 .button_next, .button_prev {
-  width: 56px;
+  min-width: 52px;
   height: 52px;
   padding: 15px;
   background-repeat: no-repeat;
@@ -446,19 +446,18 @@ button {
 }
 
 .pagination {
-  margin-top: 61px;
+  width: 340px;
+  margin: 61px auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .pagination__button {
-  width: 52px;
+  min-width: 52px;
   height: 52px;
   border-radius: 50%;
   padding: 0;
@@ -604,6 +603,20 @@ body {
           align-items: flex-start;
 }
 
+.columns-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-column-gap: 160px;
+          column-gap: 160px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .footer__column {
   margin-top: 18px;
   margin-bottom: 60px;
@@ -662,6 +675,7 @@ h3 {
   line-height: 45px;
   letter-spacing: 0.06em;
   color: #545454;
+  white-space: pre-line;
 }
 
 .pets__content {
@@ -702,6 +716,7 @@ h3 {
 }
 
 .card {
+  width: 270px;
   padding-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -733,6 +748,131 @@ h3 {
 @-moz-document url-prefix() {
   h3 {
     line-height: 44px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .wrapper {
+    width: 768px;
+    padding: 0 30px;
+  }
+  .pets__cards {
+    margin: 30px 64px 40px;
+  }
+  .card:nth-child(n + 7) {
+    display: none;
+  }
+  .pets__content {
+    padding-bottom: 77px;
+  }
+  .pagination {
+    margin-top: 0;
+  }
+  .footer {
+    padding-top: 30px;
+  }
+  .footer__content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 34px;
+  }
+  .footer__content img {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .columns-container {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: normal;
+            column-gap: normal;
+  }
+  .footer__column {
+    margin-top: 0;
+    margin-bottom: 65px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    width: 320px;
+    padding: 0 10px;
+  }
+  .navigation {
+    display: none;
+  }
+  .burger {
+    margin-right: 43px;
+    width: 30px;
+    height: 22px;
+    background-image: url("../../assets/icons/Burger-dark.svg");
+    cursor: pointer;
+  }
+  h3 {
+    font-size: 25px;
+    line-height: 130%;
+    width: auto;
+    text-align: center;
+  }
+  .pets__content {
+    padding: 42px 0;
+  }
+  .pets__content h3 {
+    width: 300px;
+  }
+  .pets__content .card:nth-child(n + 4) {
+    display: none;
+  }
+  .pets__content .pets__gallery {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 42px 0 42px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 80px;
+            column-gap: 80px;
+    row-gap: 19px;
+  }
+  .pets__content .pets__cards {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin: 42px 15px;
+  }
+  .pets__content .pagination {
+    width: 300px;
+  }
+  .columns-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__content {
+    padding: 0;
+  }
+  .footer__content > img {
+    width: 260px;
+  }
+  .footer__column {
+    height: auto;
+    width: auto;
+    margin-bottom: 40px;
+    row-gap: 40px;
+  }
+  .footer__column h3 {
+    white-space: normal;
+    padding: 0 5px;
+  }
+  .contacts {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=pets-styles.css.map */

@@ -1,0 +1,42 @@
+@media (max-width: 1279px) {
+    .wrapper {
+       width: 768px; 
+       padding: 0 30px;
+    } 
+
+    .pets__cards {
+        margin: 30px 64px 40px;
+        // width: 580px;
+    }
+
+    .card:nth-child(n + 7) {
+        display: none;
+    }
+    .pets__content {padding-bottom: 77px;}
+
+    .pagination {margin-top: 0;}
+
+    .footer {
+        padding-top: 30px;
+    }
+
+    .footer__content {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 0 34px;
+
+        img {justify-self: center;}
+    }
+
+    .columns-container {
+        width: 100%;
+        justify-content: space-between;
+        column-gap: normal;
+    }
+
+    .footer__column {
+        margin-top: 0;
+        margin-bottom: 65px;
+    }
+}
+
