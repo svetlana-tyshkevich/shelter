@@ -68,8 +68,10 @@
             flex-wrap: wrap;
             padding: 42px 0 42px;
             justify-content: center;
-            column-gap: 80px;
-            row-gap: 19px;
+
+            &>button {
+                margin: 19px 40px 0;
+            }
         }
 
         .pets__cards {order: -1;}
@@ -78,8 +80,7 @@
     .help{padding: 42px 0;}
 
     .help__categories {
-        justify-content: start;
-        column-gap: 30px;
+        justify-content: space-between;
         margin: 13px 5px 0;
     }
 
@@ -135,12 +136,13 @@
         height: auto;
         width: auto;
         margin-bottom: 40px;
-        row-gap: 40px;
         h3 {
             white-space: normal;
             padding: 0 5px;
         }
     }
+
+    .footer__link {margin-top: 40px;}
 
     .contacts {align-items: center;}
 

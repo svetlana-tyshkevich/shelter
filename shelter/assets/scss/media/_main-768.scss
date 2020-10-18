@@ -30,7 +30,7 @@
         
         .about__text {
             order: -1;
-            padding-bottom: 80px;
+            padding-bottom: 82px;
         }
     }
 
@@ -42,13 +42,19 @@
     }
 
     .help__categories {
-        column-gap: 60px;
         justify-content: space-between;
         margin: 30px 39px 0 39px;
     }
 
     .categories__item {
         width: 170px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .donation {
+        padding-top: 80px;
+        padding-bottom: 100px;
     }
 
     .donation__content {
@@ -57,7 +63,8 @@
     
     .donation__info {
             order: -1;
-            padding-bottom: 60px;
+            padding-bottom: 62px;
+            margin-left: 0;
         }
     
     .footer {
@@ -75,11 +82,11 @@
     .columns-container {
         width: 100%;
         justify-content: space-between;
-        column-gap: normal;
     }
 
     .footer__column {
         margin-top: 0;
         margin-bottom: 65px;
+        margin-right: 0;
     }
 }

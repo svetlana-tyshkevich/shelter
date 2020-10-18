@@ -5,7 +5,7 @@
     } 
 
     .pets__cards {
-        margin: 30px 64px 40px;
+        margin: 0 64px 40px;
         // width: 580px;
     }
 
@@ -31,12 +31,12 @@
     .columns-container {
         width: 100%;
         justify-content: space-between;
-        column-gap: normal;
     }
 
     .footer__column {
         margin-top: 0;
         margin-bottom: 65px;
+        margin-right: 0;
     }
 }
 
