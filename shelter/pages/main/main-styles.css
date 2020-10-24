@@ -137,7 +137,8 @@ a:focus {
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 a:active,
-a:hover {
+a:hover,
+a:active {
   outline: 0;
 }
 
@@ -402,6 +403,42 @@ button {
   font-style: italic;
 }
 
+@-webkit-keyframes slidein {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slidein {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@-webkit-keyframes slideout {
+  from {
+    right: 0;
+  }
+  to {
+    right: -100%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    right: 0;
+  }
+  to {
+    right: -100%;
+  }
+}
+
 .button {
   padding: 16px 45px;
   background: #F1CDB3;
@@ -493,7 +530,8 @@ body {
 .header {
   width: 100%;
   position: absolute;
-  top: 60px;
+  top: 0;
+  padding-top: 60px;
   margin: 0 auto;
 }
 
@@ -558,6 +596,22 @@ body {
 }
 
 /*PROMO*/
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(41, 41, 41, 0.6);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .promo {
   background: url("../../assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
@@ -953,7 +1007,7 @@ h3 {
     padding: 0 30px;
   }
   .header {
-    top: 30px;
+    padding-top: 30px;
   }
   .promo .wrapper {
     padding-top: 150px;
@@ -1057,15 +1111,95 @@ h3 {
     width: 320px;
     padding: 0 10px;
   }
+  .header {
+    padding-top: 0;
+  }
+  .header .wrapper {
+    position: relative;
+    padding-top: 30px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-transition: right 2s;
+    transition: right 2s;
+  }
+  .header.active .wrapper {
+    position: absolute;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    z-index: 15;
+  }
   .navigation {
     display: none;
+    width: 100%;
+    -webkit-transition: right 2s;
+    transition: right 2s;
+    right: -100%;
+  }
+  .navigation.active {
+    position: absolute;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    background-color: #292929;
+    z-index: 10;
+    -webkit-animation-name: slidein;
+            animation-name: slidein;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+  }
+  .logo {
+    z-index: 20;
+  }
+  .navigation__item {
+    margin-bottom: 40px;
+    margin-left: 0;
+  }
+  .navigation__item:last-child {
+    margin-bottom: 0;
+  }
+  .navigation__item a {
+    font-size: 32px;
+    line-height: 160%;
   }
   .burger {
-    margin-right: 43px;
+    z-index: 20;
+    margin-left: 43px;
     width: 30px;
     height: 22px;
     background-image: url("../../assets/icons/Burger.svg");
     cursor: pointer;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  }
+  .burger.active {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   .promo__content {
     text-align: center;

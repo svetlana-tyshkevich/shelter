@@ -10,21 +10,22 @@
     <header class="header">
         <div class="wrapper">
             <div class="logo">
-                <a href="#">
+                <a href="index.html">
                     <h1 class="logo__title">Cozy House</h1>
                 </a>
                 <div class="logo__subtitle">
                     Shelter for pets in Boston
                 </div>
             </div>
+            <div class="burger" id="burger"></div>
             <nav class="header__navigation">
                 <ul class="navigation">
                     <li class="navigation__item navigation__item_active"><a href="#">About the shelter</a></li>
                     <li class="navigation__item"><a href="../pets/pets.html">Our pets</a></li>
-                    <li class="navigation__item"><a href="#">Help the shelter</a></li>
-                    <li class="navigation__item"><a href="#">Contacts</a></li>
+                    <li class="navigation__item"><a href='javascript:void(0)'>Help the shelter</a></li>
+                    <li class="navigation__item"><a href='javascript:void(0)'>Contacts</a></li>
                 </ul>
-                <div class="burger"></div>
+                
             </nav>
         </div>
     </header>
@@ -38,7 +39,7 @@
                     <p class="promo__info">We offer to give a chance to a little and nice puppy with
                          an extremely wide and open heart. He or she will love you more than anybody else 
                          in the world, you will see!</p>
-                    <button class="button">Make a friend</button>
+                    <a href="../pets/pets.html" class="button">Make a friend</a>
                 </div>
                 
                 <img src="../../assets/images/start-screen-puppy.png" alt="start-screen-puppy" class="start-screen-puppy">
@@ -71,7 +72,7 @@
                     <div class="pets__gallery">
                         <button class="button button_bordered button_prev"></button>
                         <div class="pets__cards">
-                            <div class="card">
+                            <!-- <div class="card">
                                 <img src="../../assets/images/pets-katrine.png" alt="Katrine" class="card__photo">
                                 <span class="card__name">Katrine</span>
                                 <button class="button button_bordered">Learn more</button>
@@ -85,11 +86,11 @@
                                 <img src="../../assets/images/pets-woody.png" alt="Woody" class="card__photo">
                                 <span class="card__name">Woody</span>
                                 <button class="button button_bordered">Learn more</button>
-                            </div>
+                            </div> -->
                         </div>
                         <button class="button button_bordered button_next"></button>
                     </div>
-                    <button class="button">Get to know the rest</button>
+                    <a href="../pets/pets.html" class="button">Get to know the rest</a>
                 </div>
             </div>
         </section>
@@ -153,6 +154,10 @@
             </div>
            </div>
     </footer>
+
+    <div id="overlay"></div>
     
 </body>
+
+<script src="./main.js"></script>
 </html>

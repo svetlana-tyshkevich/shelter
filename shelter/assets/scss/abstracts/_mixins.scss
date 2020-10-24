@@ -35,3 +35,25 @@
         color: $color-dark-l;
     }
 }
+
+@keyframes slidein {
+    from {
+      right: -100%;
+    }
+
+    to {
+      right: 0;
+    }
+}
+
+@keyframes slideout {
+    from {
+      right: 0;
+    }
+
+    to {
+      right: -100%;
+    }
+}
+
+

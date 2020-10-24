@@ -142,7 +142,8 @@ a:focus {
  */
 
 a:active,
-a:hover {
+a:hover,
+a:active    {
     outline: 0;
 }
 
