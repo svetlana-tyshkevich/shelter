@@ -801,6 +801,7 @@ h3 {
 
 .card:hover, .card:focus {
   background-color: #FFFFFF;
+  cursor: pointer;
 }
 
 .card__name {

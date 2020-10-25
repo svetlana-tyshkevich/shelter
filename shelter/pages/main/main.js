@@ -18,7 +18,7 @@ overlay.addEventListener('click', openBurgerMenu);
 // SLIDER
 const petsCards = document.querySelector('.pets__cards');
 const petsButtons = document.querySelectorAll('.pets__gallery > button');
-const cards = document.querySelectorAll('.card');
+
 let pets = [];
 
 fetch('../../assets/pets.json').then(res => res.json()).then(list => {
@@ -48,8 +48,10 @@ fetch('../../assets/pets.json').then(res => res.json()).then(list => {
     }
     
    // POPUP 
+   const cards = document.querySelectorAll('.card');
+   
+console.log(cards);
     const showPopup = (e) => {
-        console.log(e.target)
         // pets.forEach(item => {
         //     if (item.name === e.target.id) {
         //         popup.innerHTML += `${pets.indexOf(item)}`
@@ -61,10 +63,17 @@ fetch('../../assets/pets.json').then(res => res.json()).then(list => {
 }
 
     petsButtons.forEach(item => item.addEventListener('click', sliderRandom));
-    cards.forEach(item => item.addEventListener('click', showPopup()));
+    cards.forEach(item => item.addEventListener('click', showPopup));
 
 
     sliderRandom();
+    cards.forEach(item => item.addEventListener('click', function(e) {
+        console.log(e.target);
+    }));
+
+
+    // document.addEventListener('click', function(e) {
+    //     console.log(e.target)})
     
 });
 
