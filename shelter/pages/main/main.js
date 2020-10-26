@@ -12,7 +12,7 @@ const openBurgerMenu = () => {
     document.body.classList.toggle('lock');
 
 }
-
+// Press on overlay
 const closeByOverlay = () => {
     navigation.classList.remove('active');
     burger.classList.remove('active');
@@ -30,23 +30,58 @@ overlay.addEventListener('click', closeByOverlay);
 const petsCards = document.querySelector('.pets__cards');
 const petsButtons = document.querySelectorAll('.pets__gallery > button');
 
+let itemsPerPage = 3;
+
+// Set number of cards per page
+const checkItemsPerPage = () => {
+    if (petsCards.matches('.pets_pages')) {
+        if (document.querySelector("body").offsetWidth >=1280 ) {
+            itemsPerPage = 8;
+            } else {
+                if (document.querySelector("body").offsetWidth >= 768 && document.querySelector("body").offsetWidth < 1280) {
+                    itemsPerPage = 6;
+                    } else {
+                        if (document.querySelector("body").offsetWidth <768 ) {
+                            itemsPerPage = 3;
+                        }
+                    }
+                }
+    } else {
+         if (document.querySelector("body").offsetWidth < 1280 && document.querySelector("body").offsetWidth >= 768) {
+            itemsPerPage = 2;
+            } else {
+                if (document.querySelector("body").offsetWidth <768 ) {
+                    itemsPerPage = 1;
+                }
+            }
+        }
+ 
+}
+
 let pets = [];
 
 fetch('../../assets/pets.json').then(res => res.json()).then(list => {
     pets = list;
     
-    
+    // Random cards
     let prevCards = [];
     const sliderRandom = () => {
         let currentCards = [];
         petsCards.innerHTML = '';
-        let n = 3;
+        checkItemsPerPage();
 
-        while (currentCards.length < n) {
+        while (currentCards.length < itemsPerPage) {
             let randomPet = pets[Math.floor(Math.random() * pets.length)];
-            if (!currentCards.includes(randomPet) && !prevCards.includes(randomPet)) {
+            if (itemsPerPage <= 4) {
+                if (!currentCards.includes(randomPet) && !prevCards.includes(randomPet)) {
                 currentCards.push(randomPet);
+                }
+            } else {
+                if (!currentCards.includes(randomPet)) {
+                    currentCards.push(randomPet);
+                    }
             }
+            
         }
 
         currentCards.forEach( item => {petsCards.innerHTML += `<div class="card" id='${item.name}'>
@@ -66,12 +101,9 @@ fetch('../../assets/pets.json').then(res => res.json()).then(list => {
 
 
    // POPUP 
-        
-   const cards = document.querySelectorAll('.pets__cards');
- 
+         
         const showPopup = (e) => {
         
-
             let popupPet ={};
             for (let i = 0; i <= pets.length - 1; i++) {
                 if (pets[i].name === e.target.id || pets[i].name === e.target.parentNode.id) {
@@ -109,15 +141,71 @@ fetch('../../assets/pets.json').then(res => res.json()).then(list => {
         };
     
 
-    
+    petsButtons.forEach(item => item.addEventListener('click', sliderRandom));  
+    petsCards.addEventListener('click', showPopup) ;  
+    console.log(petsCards);
+        
+        
+    // PAGINATION
+    const currentPage  = document.querySelector('.current-page');
+    const prevPage  = document.querySelector('.pagination_prev');
+    const nextPage  = document.querySelector('.pagination_next');
+    const firstPage  = document.querySelector('.pagination_first');
+    const lastPage  = document.querySelector('.pagination_last');
 
-    petsButtons.forEach(item => item.addEventListener('click', sliderRandom));
-    cards.forEach(item => item.addEventListener('click', showPopup));  
-     
     
+    let page = 1;
+    let maxPage = 48 / itemsPerPage;
+    currentPage.textContent = page;
+    firstPage.disabled = true;
+    prevPage.disabled = true;
 
 
-    
+    // Set page Number
+    const setPageNumber = () => {
+        if (page >= 1 && page <= maxPage) {
+            currentPage.textContent = page;
+        sliderRandom();
+        };
+        if (page === 1) {
+            firstPage.disabled = true;
+            prevPage.disabled = true;
+        } else {
+            firstPage.disabled = false;
+            prevPage.disabled = false;
+        };
+
+        if (page === maxPage) {
+            lastPage.disabled = true;
+            nextPage.disabled = true;
+        } else {
+            lastPage.disabled = false;
+            nextPage.disabled = false;
+        }
+        
+    }
+
+    prevPage.addEventListener('click', function() {
+                page--;
+                setPageNumber();
+                
+            });
+
+    nextPage.addEventListener('click', function() {
+                page++;
+                setPageNumber();
+            });
+
+    lastPage.addEventListener('click', function() {
+                page = maxPage;
+                setPageNumber();
+            });
+
+    firstPage.addEventListener('click', function() {
+                page = 1;
+                setPageNumber();
+            });
+        
 
 
     // document.addEventListener('click', function(e) {

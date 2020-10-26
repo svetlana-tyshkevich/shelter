@@ -9,23 +9,26 @@
 <body>
     <header class="header">
         <div class="wrapper">
-            <div class="logo">
-                <a href="../main/index.html">
-                    <h1 class="logo__title">Cozy House</h1>
-                </a>
-                <div class="logo__subtitle">
-                    Shelter for pets in Boston
+            <div class="header__content">
+                <div class="logo">
+                    <a href="../main/index.html">
+                        <h1 class="logo__title">Cozy House</h1>
+                    </a>
+                    <div class="logo__subtitle">
+                        Shelter for pets in Boston
+                    </div>
                 </div>
+                <div class="burger" id="burger"></div>
+                <nav class="header__navigation">
+                    <ul class="navigation">
+                        <li class="navigation__item"><a href="../main/index.html">About the shelter</a></li>
+                        <li class="navigation__item navigation__item_active"><a href="./pets.html">Our pets</a></li>
+                        <li class="navigation__item"><a href='javascript:void(0)'>Help the shelter</a></li>
+                        <li class="navigation__item"><a href='javascript:void(0)'>Contacts</a></li>
+                    </ul>
+                    
+                </nav>
             </div>
-            <nav class="header__navigation">
-                <ul class="navigation">
-                    <li class="navigation__item"><a href="../main/index.html">About the shelter</a></li>
-                    <li class="navigation__item navigation__item_active"><a href="#">Our pets</a></li>
-                    <li class="navigation__item"><a href="#">Help the shelter</a></li>
-                    <li class="navigation__item"><a href="#">Contacts</a></li>
-                </ul>
-                <div class="burger"></div>
-            </nav>
         </div>
     </header>
     
@@ -34,55 +37,17 @@
             <div class="wrapper">
                 <div class="pets__content">
                     <h3>Our friends who <br> are looking for a house</h3>
-                        <div class="pets__cards">
-                            <div class="card">
-                                <img src="../../assets/images/pets-katrine.png" alt="Katrine" class="card__photo">
-                                <span class="card__name">Katrine</span>
-                                <button class="button button_bordered">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets-jennifer.png" alt="Jennifer" class="card__photo">
-                                <span class="card__name">Jennifer</span>
-                                <button class="button button_bordered">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets-woody.png" alt="Woody" class="card__photo">
-                                <span class="card__name">Woody</span>
-                                <button class="button button_bordered">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets-sophia.jpg" alt="Sophia" class="card__photo">
-                                <span class="card__name">Sophia</span>
-                                <button class="button button_bordered">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets-timmy.jpg" alt="Timmy" class="card__photo">
-                                <span class="card__name">Timmy</span>
-                                <button class="button button_bordered">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets-charly.jpg" alt="Charly" class="card__photo">
-                                <span class="card__name">Charly</span>
-                                <button class="button button_bordered">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets-scarlet.jpg" alt="Scarlet" class="card__photo">
-                                <span class="card__name">Scarlett</span>
-                                <button class="button button_bordered">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets-freddie.jpg" alt="Freddie" class="card__photo">
-                                <span class="card__name">Freddie</span>
-                                <button class="button button_bordered">Learn more</button>
-                            </div>
+                        <div class="pets__cards pets_pages">
+                            
                             
                         </div>
+                        <div id="popup"></div>
                         <div class="pagination">
-                            <button class="button button_bordered pagination__button pagination_first" disabled><<</button>
-                            <button class="button button_bordered pagination__button pagination_prev" disabled><</button>
-                            <button class="button button_bordered pagination__button current-page">1</button>
-                            <button class="button button_bordered pagination__button pagination_next">></button>
-                            <button class="button button_bordered pagination__button pagination_last">>></button>
+                            <button class="button button_bordered pagination__button pagination_first">&lt;&lt;</button>
+                            <button class="button button_bordered pagination__button pagination_prev">&lt;</button>
+                            <button class="button button_bordered pagination__button current-page"></button>
+                            <button class="button button_bordered pagination__button pagination_next">&gt;</button>
+                            <button class="button button_bordered pagination__button pagination_last">&gt;&gt;</button>
 
                         </div>
                         
@@ -113,5 +78,9 @@
            </div>
     </footer>
     
+    <div id="overlay"></div>
+
 </body>
+
+<script src="../main/main.js"></script>
 </html>

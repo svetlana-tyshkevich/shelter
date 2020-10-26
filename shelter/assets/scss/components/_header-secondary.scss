@@ -1,11 +1,17 @@
 .header {
     width: 100%;
-    position: relative;
-    top: 0;
     padding: 31px 0;
     position: sticky;
+    height: 120px;
     top: 0;
     background-color: $color-light-xl;
+
+}
+
+.header.active {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .logo__title {
