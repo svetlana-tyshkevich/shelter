@@ -802,8 +802,6 @@ h3 {
           animation-name: slider;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  animation-name: slider;
-  animation-duration: 1s;
 }
 
 .card:hover, .card:focus {

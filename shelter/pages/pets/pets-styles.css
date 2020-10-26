@@ -656,8 +656,7 @@ body.lock {
 .header {
   width: 100%;
   padding: 31px 0;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   height: 120px;
   top: 0;
   background-color: #FFFFFF;
@@ -902,6 +901,7 @@ body.lock {
 
 .pets {
   background-color: #F6F6F6;
+  padding-top: 120px;
 }
 
 h3 {
@@ -1043,14 +1043,14 @@ h3 {
     padding: 0 10px;
   }
   .header__content {
-    width: 100%;
+    width: 320px;
     position: relative;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
   .header.active .wrapper {
-    position: absolute;
+    position: fixed;
     right: 0;
     display: -webkit-box;
     display: -ms-flexbox;

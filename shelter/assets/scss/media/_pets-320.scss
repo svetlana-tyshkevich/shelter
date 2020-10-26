@@ -5,14 +5,14 @@
     }
 
     .header__content {       
-        width: 100%;
+        width: 320px;
         position: relative; 
         justify-content: space-between;
         
     }
 
     .header.active .wrapper {
-        position: absolute;
+        position: fixed;
         right: 0;
         
         display: flex;
