@@ -144,6 +144,10 @@ fetch('../../assets/pets.json').then(res => res.json()).then(list => {
 
     petsButtons.forEach(item => item.addEventListener('click', sliderRandom));  
     petsCards.addEventListener('click', showPopup) ;  
+<<<<<<< HEAD
+=======
+    petsPages.addEventListener('resize', sliderRandom);
+>>>>>>> 7404d4f800f30e8e4fd1c364bfd7ff6c63fa3eab
     
         
         
