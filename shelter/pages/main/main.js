@@ -28,6 +28,7 @@ overlay.addEventListener('click', closeByOverlay);
 
 // SLIDER
 const petsCards = document.querySelector('.pets__cards');
+const petsPages = document.querySelector('.pets_pages');
 const petsButtons = document.querySelectorAll('.pets__gallery > button');
 
 let itemsPerPage = 3;
@@ -55,8 +56,8 @@ const checkItemsPerPage = () => {
                 }
             }
         }
- 
 }
+
 
 let pets = [];
 
@@ -143,7 +144,8 @@ fetch('../../assets/pets.json').then(res => res.json()).then(list => {
 
     petsButtons.forEach(item => item.addEventListener('click', sliderRandom));  
     petsCards.addEventListener('click', showPopup) ;  
-    console.log(petsCards);
+    petsPages.addEventListener('resize', sliderRandom);
+    
         
         
     // PAGINATION

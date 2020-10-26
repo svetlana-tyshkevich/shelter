@@ -23,6 +23,7 @@ body.lock {
     opacity: 1;
     pointer-events: all;
 }
+
   
 .wrapper {
     width: 1280px;
@@ -85,7 +86,14 @@ body.lock {
     }
 }
 
+.navigation__item.disabled a {
+    pointer-events: none;
+}
+
 .navigation__item_active a {
-    color: $color-light-s;
+    // color: $color-light-s;
     border-bottom: 3px solid $color-primary;
+    &:hover, &:focus {
+        color: $color-light-s;
+    }
 }
