@@ -964,6 +964,10 @@ h3 {
           align-items: center;
   background-color: #FAFAFA;
   border-radius: 9px 9px 0 0;
+  -webkit-animation-name: slider;
+          animation-name: slider;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   margin-top: 30px;
 }
 
