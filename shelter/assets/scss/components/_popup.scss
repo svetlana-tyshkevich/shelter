@@ -1,0 +1,128 @@
+
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    background-color: $color-light-s;
+    display: flex;
+    border-radius: 9px;
+
+    & img {
+        border-radius: 9px;
+        flex-shrink: 0;
+        width: 500px;
+        height: 500px;
+    }
+  }
+
+  
+  .popup__info {
+    width: 350px;
+    margin: 50px 20px 0 30px;
+    color: #000;
+    text-align: left;
+  }
+
+  .popup__name {
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  .popup__breed{
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+  }
+
+  .popup__desc {
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    margin: 40px 0;
+
+  }
+
+  
+  .feature {
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    padding-left: 14px;
+    margin-bottom: 5px;
+    position: relative;
+    display: block;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        position: absolute;
+        top: 7px;
+        left: 0;
+    }
+
+    & > span {
+      font-weight: bold;
+    }
+  }
+
+  #popup__close {
+      width: 52px;
+      height: 52px;
+      background: url('../../assets/icons/Vector.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      border: 2px solid #F1CDB3;
+      position: absolute;
+      right: -42px;
+      top: -52px;
+
+      &:hover {
+          transform: scale(1.2);
+          cursor: pointer;
+      }
+  }
+
+  @media (max-width: 1279px) {
+      .popup > img {
+          width: 350px;
+          height: 350px;
+      }
+
+      .popup__info {
+          width: 260px;
+        margin: 10px 10px 0;
+      }
+
+      .popup__desc {
+        font-size: 13px;
+        margin: 20px 0;
+      }
+  }
+
+  @media (max-width: 767px) {
+    .popup > img {
+        display: none;
+    }
+
+    .popup__info {
+        width: 240px;
+      margin: 0;
+      padding: 0 10px;
+    }
+
+    .popup__desc {
+      font-size: 13px;
+      margin: 20px 0;
+    }
+}

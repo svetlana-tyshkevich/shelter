@@ -547,6 +547,26 @@ body {
   font-weight: normal;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(41, 41, 41, 0.6);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .wrapper {
   width: 1280px;
   margin: 0 auto;
@@ -561,7 +581,7 @@ body {
   margin: 0 auto;
 }
 
-.header .wrapper {
+.header__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -622,22 +642,6 @@ body {
 }
 
 /*PROMO*/
-#overlay {
-  position: fixed;
-  opacity: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(41, 41, 41, 0.6);
-  pointer-events: none;
-}
-
-#overlay.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
 .promo {
   background: url("../../assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
@@ -791,6 +795,8 @@ h3 {
 .card:hover, .card:focus {
   background-color: #FFFFFF;
   cursor: pointer;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .card__name {
@@ -1032,6 +1038,131 @@ h3 {
   margin-right: 20px;
 }
 
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 15;
+  background-color: #FAFAFA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 9px;
+}
+
+.popup img {
+  border-radius: 9px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 500px;
+  height: 500px;
+}
+
+.popup__info {
+  width: 350px;
+  margin: 50px 20px 0 30px;
+  color: #000;
+  text-align: left;
+}
+
+.popup__name {
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.popup__breed {
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.popup__desc {
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  margin: 40px 0;
+}
+
+.feature {
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  padding-left: 14px;
+  margin-bottom: 5px;
+  position: relative;
+  display: block;
+}
+
+.feature::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #F1CDB3;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+
+.feature > span {
+  font-weight: bold;
+}
+
+#popup__close {
+  width: 52px;
+  height: 52px;
+  background: url("../../assets/icons/Vector.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  border: 2px solid #F1CDB3;
+  position: absolute;
+  right: -42px;
+  top: -52px;
+}
+
+#popup__close:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+}
+
+@media (max-width: 1279px) {
+  .popup > img {
+    width: 350px;
+    height: 350px;
+  }
+  .popup__info {
+    width: 260px;
+    margin: 10px 10px 0;
+  }
+  .popup__desc {
+    font-size: 13px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .popup > img {
+    display: none;
+  }
+  .popup__info {
+    width: 240px;
+    margin: 0;
+    padding: 0 10px;
+  }
+  .popup__desc {
+    font-size: 13px;
+    margin: 20px 0;
+  }
+}
+
 @media (max-width: 1279px) {
   .wrapper {
     width: 768px;
@@ -1145,14 +1276,13 @@ h3 {
   .header {
     padding-top: 0;
   }
-  .header .wrapper {
+  .header__content {
+    width: 100%;
     position: relative;
     padding-top: 30px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-transition: right 2s;
-    transition: right 2s;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .header.active .wrapper {
     position: absolute;
@@ -1169,15 +1299,12 @@ h3 {
   }
   .navigation {
     display: none;
-    width: 100%;
-    -webkit-transition: right 2s;
-    transition: right 2s;
+    width: 320px;
+    -webkit-transition: right 1s linear;
+    transition: right 1s linear;
     right: -100%;
-  }
-  .navigation.active {
-    position: absolute;
+    position: fixed;
     height: 100vh;
-    right: 0;
     top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1195,10 +1322,9 @@ h3 {
     text-align: center;
     background-color: #292929;
     z-index: 10;
-    -webkit-animation-name: slidein;
-            animation-name: slidein;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
+  }
+  .navigation.active {
+    right: 0;
   }
   .logo {
     z-index: 20;
@@ -1216,7 +1342,6 @@ h3 {
   }
   .burger {
     z-index: 20;
-    margin-left: 43px;
     width: 30px;
     height: 22px;
     background-image: url("../../assets/icons/Burger.svg");

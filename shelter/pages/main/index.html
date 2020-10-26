@@ -9,24 +9,26 @@
 <body>
     <header class="header">
         <div class="wrapper">
-            <div class="logo">
-                <a href="index.html">
-                    <h1 class="logo__title">Cozy House</h1>
-                </a>
-                <div class="logo__subtitle">
-                    Shelter for pets in Boston
+            <div class="header__content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1 class="logo__title">Cozy House</h1>
+                    </a>
+                    <div class="logo__subtitle">
+                        Shelter for pets in Boston
+                    </div>
                 </div>
+                <div class="burger" id="burger"></div>
+                <nav class="header__navigation">
+                    <ul class="navigation">
+                        <li class="navigation__item navigation__item_active"><a href="#">About the shelter</a></li>
+                        <li class="navigation__item"><a href="../pets/pets.html">Our pets</a></li>
+                        <li class="navigation__item"><a href='javascript:void(0)'>Help the shelter</a></li>
+                        <li class="navigation__item"><a href='javascript:void(0)'>Contacts</a></li>
+                    </ul>
+                    
+                </nav>
             </div>
-            <div class="burger" id="burger"></div>
-            <nav class="header__navigation">
-                <ul class="navigation">
-                    <li class="navigation__item navigation__item_active"><a href="#">About the shelter</a></li>
-                    <li class="navigation__item"><a href="../pets/pets.html">Our pets</a></li>
-                    <li class="navigation__item"><a href='javascript:void(0)'>Help the shelter</a></li>
-                    <li class="navigation__item"><a href='javascript:void(0)'>Contacts</a></li>
-                </ul>
-                
-            </nav>
         </div>
     </header>
     
@@ -75,8 +77,9 @@
                             
 
                         </div>
+                        
                         <div id="popup"></div>
-                        <div id="close"></div>
+                        
                         <button class="button button_bordered button_next"></button>
                     </div>
                     <a href="../pets/pets.html" class="button">Get to know the rest</a>

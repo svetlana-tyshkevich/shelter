@@ -3,6 +3,26 @@ body {
     font-style: normal;
     font-weight: normal;
 }
+
+body.lock {
+    overflow: hidden;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(41, 41, 41, 0.6);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
   
 .wrapper {
     width: 1280px;
@@ -17,12 +37,14 @@ body {
     padding-top: 60px;
     margin: 0 auto;
     
-    .wrapper {
+    
+}
+
+.header__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     }
-}
 
 .logo__title {
     font-family: $font-primary;

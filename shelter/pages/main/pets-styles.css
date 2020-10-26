@@ -547,6 +547,26 @@ body {
   font-weight: normal;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(41, 41, 41, 0.6);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .wrapper {
   width: 1280px;
   margin: 0 auto;
@@ -561,7 +581,7 @@ body {
   margin: 0 auto;
 }
 
-.header .wrapper {
+.header__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -802,6 +822,8 @@ h3 {
 .card:hover, .card:focus {
   background-color: #FFFFFF;
   cursor: pointer;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .card__name {
