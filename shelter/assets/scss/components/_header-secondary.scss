@@ -28,5 +28,6 @@
 }
 
 .navigation__item_active a {
-    color: $color-dark-3xl;
+    // color: $color-dark-3xl;
+    &:hover {color: $color-dark-3xl;}
 }

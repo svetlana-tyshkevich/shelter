@@ -88,7 +88,7 @@
       top: -52px;
 
       &:hover {
-          transform: scale(1.2);
+          background-color: #F1CDB3 ;
           cursor: pointer;
       }
   }
@@ -124,5 +124,9 @@
     .popup__desc {
       font-size: 13px;
       margin: 20px 0;
+    }
+
+    #popup__close {
+      right: -32px;
     }
 }

@@ -478,6 +478,7 @@ button:hover, a:hover {
   letter-spacing: 0.06em;
   text-align: center;
   color: #292929;
+  display: inline-block;
 }
 
 .button:hover {
@@ -640,9 +641,16 @@ body.lock {
   color: #FAFAFA;
 }
 
+.navigation__item.disabled a {
+  pointer-events: none;
+}
+
 .navigation__item_active a {
-  color: #FAFAFA;
   border-bottom: 3px solid #F1CDB3;
+}
+
+.navigation__item_active a:hover, .navigation__item_active a:focus {
+  color: #FAFAFA;
 }
 
 .header {
@@ -681,7 +689,7 @@ body.lock {
   color: #292929;
 }
 
-.navigation__item_active a {
+.navigation__item_active a:hover {
   color: #292929;
 }
 
@@ -855,8 +863,7 @@ body.lock {
 }
 
 #popup__close:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  background-color: #F1CDB3;
   cursor: pointer;
 }
 
@@ -887,6 +894,9 @@ body.lock {
   .popup__desc {
     font-size: 13px;
     margin: 20px 0;
+  }
+  #popup__close {
+    right: -32px;
   }
 }
 
