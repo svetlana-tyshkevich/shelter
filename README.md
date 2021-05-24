@@ -1,2 +1,4 @@
-# svetlana-tyshkevich-JS2020Q3
-Private repository for @svetlana-tyshkevich
+#Shelter
+HTML, SCSS, JS
+Pixel Perfect, adaptive design, slider, pagination
+Deploy: https://svetlana-tyshkevich.github.io/shelter/shelter/pages/main/
