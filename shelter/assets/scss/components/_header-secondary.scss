@@ -2,6 +2,7 @@
     width: 100%;
     padding: 31px 0;
     position: fixed;
+    z-index: 20;
     height: 120px;
     top: 0;
     background-color: $color-light-xl;
@@ -28,6 +29,5 @@
 }
 
 .navigation__item_active a {
-    // color: $color-dark-3xl;
     &:hover {color: $color-dark-3xl;}
 }

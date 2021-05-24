@@ -209,9 +209,6 @@ fetch('../../assets/pets.json').then(res => res.json()).then(list => {
             });
         
 
-
-    // document.addEventListener('click', function(e) {
-    //     console.log(e.target)})
     
 });
 
